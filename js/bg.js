@@ -54,3 +54,7 @@ chrome.runtime.onStartup.addListener(function () {
     const darkModeMql = window.matchMedia("(prefers-color-scheme: dark)");
     darkModeMql.onchange = updateIcon;
 });
+
+chrome.browserAction.onClicked.addListener(function () {
+    chrome.tabs.create({ url: "edge://newtab" });
+});
