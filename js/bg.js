@@ -55,6 +55,7 @@ chrome.runtime.onStartup.addListener(function () {
     darkModeMql.onchange = updateIcon;
 });
 
+// Opens new tab when clicking the extension icon, we're prepending chrome because Chrome accepts that and Edge does too for some reason
 chrome.browserAction.onClicked.addListener(function () {
-    chrome.tabs.create({ url: "edge://newtab" });
+    chrome.tabs.create({ url: "chrome://newtab" });
 });
