@@ -8,6 +8,7 @@
         "16": "icons/tab-dark-16.png",
         "32": "icons/tab-dark-32.png",
         "48": "icons/tab-dark-48.png",
+        "96": "icons/tab-dark-96.png",
         "128": "icons/tab-dark-128.png"
     },
     "chrome_url_overrides": {

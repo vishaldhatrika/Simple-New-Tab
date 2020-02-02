@@ -9,7 +9,7 @@ function setIcon(image) {
         path: {},
     };
 
-    for (const size of [16, 32, 48, 128]) {
+    for (const size of [16, 32, 48, 96, 128]) {
         data.path[size] = `icons/${image}-${size}.png`;
     }
 
