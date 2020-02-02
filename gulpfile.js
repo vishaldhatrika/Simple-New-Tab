@@ -9,7 +9,9 @@ const OUT_DIR = "./build";
 sass.compiler = require("node-sass");
 
 fs.mkdir(OUT_DIR, (err) => {
-    console.error(err);
+    if (err !== null && err.code !== "EEXIST") {
+        console.error(err);
+    }
 });
 
 function main(cb) {
