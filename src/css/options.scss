@@ -1,0 +1,43 @@
+html,
+body {
+    background-color: #f2f2f2;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html,
+    body {
+        background-color: #242424;
+    }
+}
+
+body {
+    display: grid;
+}
+
+header {
+    margin-left: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>input {
+        flex: 1 1;
+        margin: .5rem;
+    }
+}
+
+input {
+    border: none;
+    border-radius: 0.5rem;
+    background: hsl(0, 0%, 93%);
+    padding: .75rem 1rem;
+    box-shadow: 0 0.75rem 2rem hsla(220, 14%, 30%, 0.25);
+
+    &[type="submit"] {
+        background: hsl(170, 98%, 32%);
+        color: white;
+    }
+}

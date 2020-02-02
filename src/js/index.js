@@ -1,3 +1,8 @@
+const Unsplash = require("unsplash-js").default;
+const { accessKey } = require("./config.json");
+
+const unsplash = new Unsplash({ accessKey: accessKey });
+
 // Set title
 document.title = chrome.i18n.getMessage("tabTitle");
 
