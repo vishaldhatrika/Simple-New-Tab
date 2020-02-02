@@ -19,7 +19,9 @@
         "storage"
     ],
     "background": {
-        "scripts": ["js/bg.js"],
+        "scripts": [
+            "js/bg.js"
+        ],
         "persistent": false
     },
     "browser_action": {
