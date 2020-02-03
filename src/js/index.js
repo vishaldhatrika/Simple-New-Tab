@@ -5,7 +5,7 @@ const today = new Date(Date.now());
 
 chrome.storage.local.get(["lastDate"], function(comparisonDate) {
     if (today.getDate !== comparisonDate.getDate) {
-        chrome.runtime.sendMessage({ type: "change-wallpaper" });
+        chrome.runtime.sendMessage({ type: "update-wallpaper" });
     }
 });
 

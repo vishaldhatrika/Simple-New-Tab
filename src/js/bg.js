@@ -76,7 +76,7 @@ chrome.storage.onChanged.addListener(function (changes) {
 chrome.runtime.onMessage.addListener(function (request) {
     if (request.type === "update-icon") {
         updateIcon();
-    } else if (request.type === "change-wallpaper") {
+    } else if (request.type === "update-wallpaper") {
         await fetchWallpaper();
     } else {
         return false;
