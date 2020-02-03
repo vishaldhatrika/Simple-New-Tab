@@ -4,7 +4,8 @@
   "description": "A blank new tab page.",
   "main": "src/js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "watch": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

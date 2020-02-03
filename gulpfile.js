@@ -18,7 +18,7 @@ function main(cb) {
     // Bring over the HTML
     gulp.src(IN_DIR + "/*.html")
         .pipe(gulp.dest(OUT_DIR));
-    // Bring over the JS files as well except index.js, that's handled by webpack
+    // Bring over the JS files
     gulp.src(IN_DIR + "/js/*.js")
         .pipe(gulp.dest(OUT_DIR + "/js/"));
     gulp.src(IN_DIR + "/js/config.json")
