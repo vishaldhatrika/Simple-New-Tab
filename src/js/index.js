@@ -1,25 +1,13 @@
-const Unsplash = require("unsplash-js").default;
-const { appName, accessKey } = require("./config.json");
-
-const unsplash = new Unsplash({ accessKey: accessKey });
-
-unsplash.photos.getRandomPhoto({ featured: true })
-    .then((response) => {
-        return response.json();
-    })
-    .then((responseData) => {
-        console.log("Image: " + responseData.urls.full);
-        console.log("Image: " + responseData.description);
-        console.log("Suggested text color: " + responseData.color);
-        console.log("User name: " + responseData.user.name);
-        console.log("User link: " + responseData.user.links.html);
-        const userFullName = responseData.user.name;
-        const userLink = responseData.user.links.html;
-        const attribLink = `Photo by <a href="${userLink}?utm_source=${appName}&utm_medium=referral">${userFullName}</a> on <a href="https://unsplash.com/?utm_source=${appName}&utm_medium=referral">Unsplash</a>`;
-    });
-
 // Set title
 document.title = chrome.i18n.getMessage("tabTitle");
+
+const today = new Date(Date.now());
+
+chrome.storage.local.get(["lastDate"], function(comparisonDate) {
+    if (today.getDate !== comparisonDate.getDate) {
+        chrome.runtime.sendMessage({ type: "change-wallpaper" });
+    }
+});
 
 // Set favicon
 function updateFavicon(e) {
