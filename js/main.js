@@ -1,3 +1,6 @@
+// Redirect to fakebox new tab
+chrome.tabs.update({ url: "chrome-search://local-ntp/local-ntp.html", active: true, selected: true })
+
 // Set favicon
 function updateExtensionIcon(e) {
     const type = e.matches ? "light" : "dark";
@@ -6,5 +9,3 @@ function updateExtensionIcon(e) {
 const mql = window.matchMedia("(prefers-color-scheme: dark)");
 mql.onchange = updateExtensionIcon;
 updateExtensionIcon(mql);
-
-chrome.tabs.update({ url: "chrome-search://local-ntp/local-ntp.html", active: !0, selected: !0 })
