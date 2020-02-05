@@ -57,5 +57,5 @@ chrome.runtime.onStartup.addListener(function () {
 
 // Opens new tab when clicking the extension icon, we're prepending chrome because Chrome accepts that and Edge does too for some reason
 chrome.browserAction.onClicked.addListener(function () {
-    chrome.tabs.create({ url: "chrome://newtab" });
+    chrome.tabs.create({ url: "chrome-search://local-ntp/local-ntp.html" });
 });

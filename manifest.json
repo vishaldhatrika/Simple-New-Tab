@@ -14,7 +14,8 @@
         "newtab": "index.html"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "tabs"
     ],
     "background": {
         "scripts": ["js/bg.js"],
