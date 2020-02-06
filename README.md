@@ -1,2 +1,3 @@
-# Blank Tab for Microsoft Edge
-Blank new tab extension for Microsoft Edge with background color that follows browser color theme.
+# Simple New Tab
+
+A new tab page with a search bar that uses your default search engine. Similar to Google Chrome's new tab but more minimal.

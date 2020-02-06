@@ -1,12 +1,10 @@
-// Set title
-document.title = chrome.i18n.getMessage("tabTitle");
+// Redirect to fakebox new tab
+chrome.tabs.update({ url: "chrome-search://local-ntp/local-ntp.html", active: true, selected: true });
 
 // Set favicon
-function updateFavicon(e) {
-    const type = e.matches ? "light" : "dark";
-    document.querySelector("link[rel=\"shortcut icon\"]").href = `icons/tab-${type}-32.png`;
+function updateExtensionIcon() {
     chrome.runtime.sendMessage({ type: "update-icon" }); // Only works if this page is open, but still, better than nothing.
 }
 const mql = window.matchMedia("(prefers-color-scheme: dark)");
-mql.onchange = updateFavicon;
-updateFavicon(mql);
+mql.onchange = updateExtensionIcon;
+updateExtensionIcon();
